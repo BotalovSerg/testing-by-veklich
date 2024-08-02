@@ -10,7 +10,10 @@ from handlers import router
 
 
 async def main():
-    bot = Bot(token=os.getenv("API_TOKEN"), default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(
+        token=os.getenv("API_TOKEN"),
+        default=DefaultBotProperties(parse_mode=ParseMode.HTML),
+    )
     dp = Dispatcher()
 
     dp.include_router(router)
